@@ -1,7 +1,7 @@
 # ex_vlruiz108-estrutura_para_next
 
 ## 1 Como deverá ficar a estrutura
-your-project/
+´´´projeto/
 ├── backend/
 │   ├── controllers/
 │   │   ├── authController.ts
@@ -29,6 +29,7 @@ your-project/
     ├── next.config.js
     ├── package.json
     └── public/
+´´´
 
 ## Backend
 
