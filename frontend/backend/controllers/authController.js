@@ -1,6 +1,7 @@
-const admin = require('firebase-admin');
+import * as admin from 'firebase-admin';
+import { Request, Response } from 'express';
 
-exports.createUser = async (req, res) => {
+export const createUser = async (req: Request, res: Response) => {
   const { email, password } = req.body;
   try {
     const user = await admin.auth().createUser({ email, password });
@@ -9,3 +10,4 @@ exports.createUser = async (req, res) => {
     res.status(400).send(error.message);
   }
 };
+

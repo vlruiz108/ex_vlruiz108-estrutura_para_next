@@ -1,7 +1,8 @@
-const admin = require('firebase-admin');
-const { v4: uuidv4 } = require('uuid');
+import * as admin from 'firebase-admin';
+import { Request, Response } from 'express';
+import { v4 as uuidv4 } from 'uuid';
 
-exports.createLog = async (req, res) => {
+export const createLog = async (req: Request, res: Response) => {
   const { userId, action, details } = req.body;
   try {
     const logId = uuidv4();

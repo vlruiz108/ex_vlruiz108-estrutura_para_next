@@ -1,5 +1,5 @@
-const express = require('express');
-const { createLog } = require('../controllers/logController');
+import * as express from 'express';
+import { createLog } from '../controllers/logController';
 
 const router = express.Router();
 

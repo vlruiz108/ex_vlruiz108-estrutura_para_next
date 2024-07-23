@@ -1,38 +1,58 @@
 # ex_vlruiz108-estrutura_para_next
 
-## 1 Configurar o Backend (Node.js com Firebase)
+## 1 Como deverá ficar a estrutura
+your-project/
+├── backend/
+│   ├── controllers/
+│   │   ├── authController.ts
+│   │   ├── imageController.ts
+│   │   └── logController.ts
+│   ├── routes/
+│   │   ├── authRoutes.ts
+│   │   ├── imageRoutes.ts
+│   │   └── logRoutes.ts
+│   ├── utils/
+│   │   └── geolocation.ts
+│   ├── index.ts
+│   └── package.json
+└── frontend/
+    ├── src/
+    │   ├── components/
+    │   ├── pages/
+    │   │   ├── api/
+    │   │   │   ├── auth/
+    │   │   │   │   └── signup.ts
+    │   │   ├── Home.tsx
+    │   │   └── index.tsx
+    │   └── App.tsx
+    ├── tsconfig.json
+    ├── next.config.js
+    ├── package.json
+    └── public/
 
-backend/package.json
+## Backend
 
-backend/index.js
+Config backend/package.json
+backend/tsconfig.json
+backend/index.ts
 
-### Configura o servidor Express e inicializa o Firebase Admin.
+### Controladores
+backend/controllers/authController.ts
+backend/controllers/imageController.ts
+backend/controllers/logController.ts
 
-## Controladores
-### Os controladores gerenciam a lógica de negócios.
-
-backend/controllers/authController.js
-
-backend/controllers/imageController.js
-
-backend/controllers/logController.js
-
-## Rotas
-#### Definimos as rotas para cada funcionalidade.
-
-backend/routes/authRoutes.js
-
-backend/routes/imageRoutes.js
-
-backend/routes/logRoutes.js
+### Rotas
+backend/routes/authRoutes.ts
+backend/routes/imageRoutes.ts
+backend/routes/logRoutes.ts
 
 ## Utilitário de Geolocalização
-### Função para obter coordenadas geográficas.
+backend/utils/geolocation.ts
 
-backend/utils/geolocation.js
+## Frontend
+frontend/tsconfig.json
+frontend/src/pages/api/auth/signup.ts
+frontend/src/pages/Home.tsx
 
-## 2 Integração com o Frontend (Next.js)
-
-frontend/pages/api/auth/signup.js
-
-### Este exemplo mostra como o frontend Next.js pode interagir com o backend.
+### Conclusão
+Backend em Node.js utilizando TypeScript e o frontend em React com TypeScript integrados de forma adequada. Não esquecer de ajustar as URLs e as chaves de API conforme necessário para o projeto.

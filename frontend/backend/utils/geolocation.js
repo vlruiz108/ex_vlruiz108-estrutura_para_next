@@ -1,6 +1,6 @@
-const axios = require('axios');
+import axios from 'axios';
 
-exports.getGeolocation = async (address) => {
+export const getGeolocation = async (address: string) => {
   const apiKey = 'YOUR_OPENCAGE_API_KEY';
   const url = `https://api.opencagedata.com/geocode/v1/json?q=${address}&key=${apiKey}`;
   

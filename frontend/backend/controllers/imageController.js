@@ -1,7 +1,8 @@
-const admin = require('firebase-admin');
-const { v4: uuidv4 } = require('uuid');
+import * as admin from 'firebase-admin';
+import { Request, Response } from 'express';
+import { v4 as uuidv4 } from 'uuid';
 
-exports.uploadImage = async (req, res) => {
+export const uploadImage = async (req: Request, res: Response) => {
   const { userId, imageUrl, location } = req.body;
   try {
     const imageId = uuidv4();

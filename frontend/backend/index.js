@@ -1,6 +1,6 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-const express = require('express');
+import * as functions from 'firebase-functions';
+import * as admin from 'firebase-admin';
+import * as express from 'express';
 
 admin.initializeApp();
 
@@ -16,3 +16,4 @@ app.use('/images', imageRoutes);
 app.use('/logs', logRoutes);
 
 exports.api = functions.https.onRequest(app);
+
